@@ -3,7 +3,7 @@ WITH all_ids AS (
     FROM RequestAccepted ra
     GROUP BY ra.requester_id
 
-    UNION ALL -- don't remove duplicates
+    UNION ALL 
 
     SELECT ra.accepter_id AS id, COUNT(*) AS cnt 
     FROM RequestAccepted ra
